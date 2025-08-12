@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DomVest — Ternura & Postura</title>
+  <meta name="description" content="E‑commerce de roupas e acessórios masculinos que unem ternura e postura do homem moderno." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: {50:'#faf9f7',100:'#f4f1ed',200:'#e8e2d9',300:'#d9cfc1',400:'#c2b4a2',500:'#a99882',600:'#8a7a66',700:'#6e6153',800:'#544b41',900:'#3c362f'},
+            brand: {50:'#eef7f6',100:'#d7eeec',200:'#abd9d3',300:'#7fc3bb',400:'#57ada4',500:'#3f958c',600:'#32756f',700:'#285c58',800:'#1f4744',900:'#172f2d'}
+          },
+          fontFamily: {sans:['Inter','ui-sans-serif','system-ui'], serif:['Playfair Display','ui-serif','Georgia']},
+          boxShadow: {soft:'0 10px 30px rgba(0,0,0,0.06)'}
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass{backdrop-filter: blur(8px); background:rgba(255,255,255,.6)}
+  </style>
+</head>
+<body class="bg-base-50 text-base-900 antialiased">
+  <!-- Topbar -->
+  <div class="w-full bg-base-900 text-base-50 text-sm">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
+      <p>Frete grátis acima de R$ 299</p>
+      <nav class="hidden md:flex gap-6">
+        <a href="#produtos" class="hover:underline">Produtos</a>
+        <a href="#sobre" class="hover:underline">Manifesto</a>
+        <a href="#contato" class="hover:underline">Contato</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/70 glass border-b border-base-200">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 5v8l-7 5-7-5V8l7-5z" stroke="#32756f" stroke-width="1.5"/><path d="M9 14l3-6 3 6" stroke="#172f2d" stroke-width="1.5"/></svg>
+        <span class="font-serif text-2xl tracking-tight">DomVest</span>
+      </a>
+      <div class="hidden md:flex items-center gap-3">
+        <div class="relative">
+          <input type="search" placeholder="Buscar…" class="peer w-72 rounded-xl border border-base-300 bg-white/80 px-4 py-2 outline-none focus:ring-2 focus:ring-brand-300"/>
+          <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-base-500">⌕</span>
+        </div>
+        <button id="cartBtn" class="rounded-xl bg-base-900 text-base-50 px-4 py-2 hover:bg-base-800 transition">Carrinho</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO: Banner paisagem (substitua img/hero-domvest.jpg pelo arquivo gerado) -->
+  <section class="relative">
+    <div class="absolute inset-0">
+      <img src="img/hero-domvest.jpg" alt="Banner: relógio dourado com couro marrom, cardigan bege e mochila preta em composição moderna" class="h-[60vh] md:h-[72vh] w-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-base-900/80 via-base-900/40 to-transparent"></div>
+    </div>
+    <div class="relative mx-auto max-w-7xl px-4 py-24 md:py-36">
+      <div class="max-w-2xl text-white">
+        <h1 class="font-serif text-4xl md:text-6xl leading-tight">Ternura no toque, postura em cada detalhe.</h1>
+        <p class="mt-4 text-base md:text-lg text-base-100/90">Peças e acessórios que acolhem e erguem — conforto, elegância e atitude para o homem moderno.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#produtos" class="rounded-2xl bg-brand-500 px-6 py-3 font-medium text-white shadow-soft hover:bg-brand-600 transition">Ver produtos</a>
+          <a href="#sobre" class="rounded-2xl bg-white/90 px-6 py-3 font-medium text-base-900 shadow-soft hover:bg-white transition">Manifesto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section id="sobre" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="font-serif text-3xl md:text-4xl">Gentileza que fortalece. Presença que acolhe.</h2>
+        <p class="mt-4 text-base-700 leading-relaxed">Na DomVest, a suavidade dos tecidos e a firmeza dos cortes convivem. A modernidade não precisa gritar: ela respira, abraça e sustenta a sua melhor versão.</p>
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-base-800">
+          <li class="flex gap-3"><span>✔</span><span>Materiais selecionados e acabamentos premium</span></li>
+          <li class="flex gap-3"><span>✔</span><span>Design atemporal com paleta neutra</span></li>
+          <li class="flex gap-3"><span>✔</span><span>Conforto que melhora a postura</span></li>
+          <li class="flex gap-3"><span>✔</span><span>Produção responsável</span></li>
+        </ul>
+      </div>
+      <div class="rounded-3xl bg-white p-6 border border-base-200 shadow-soft">
+        <p class="text-sm text-base-700">“Vista-se para quem você é — o resto vira consequência.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos (usando suas 3 imagens) -->
+  <section id="produtos" class="mx-auto max-w-7xl px-4 pb-4">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="font-serif text-3xl md:text-4xl">Seleção DomVest</h2>
+      <div class="flex gap-3">
+        <select class="rounded-xl border border-base-300 bg-white px-3 py-2 text-sm"><option>Ordenar: Destaques</option><option>Menor preço</option><option>Maior preço</option></select>
+      </div>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Produto 1: Kit Relógio + Pulseiras -->
+      <article class="group rounded-3xl border border-base-200 bg-white p-3 shadow-soft hover:-translate-y-1 transition">
+        <div class="relative overflow-hidden rounded-2xl">
+          <img src="img/relogio-kit.jpg" alt="Relógio dourado com pulseiras de couro e miçangas" class="h-64 w-full object-cover"/>
+          <span class="absolute left-3 top-3 rounded-full bg-brand-600 text-white px-3 py-1 text-xs">Novo</span>
+        </div>
+        <div class="p-3">
+          <h3 class="font-medium">Kit Relógio & Pulseiras Couro</h3>
+          <p class="text-sm text-base-700">Elegância clássica, textura acolhedora</p>
+          <div class="mt-2 flex items-center justify-between">
+            <span class="font-semibold">R$ 429,90</span>
+            <button class="add-to-cart rounded-xl bg-base-900 text-white px-3 py-2 text-sm" data-name="Kit Relógio & Pulseiras" data-price="429.90">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 2: Cardigan Bege -->
+      <article class="group rounded-3xl border border-base-200 bg-white p-3 shadow-soft hover:-translate-y-1 transition">
+        <div class="relative overflow-hidden rounded-2xl">
+          <img src="img/cardigan-bege.jpg" alt="Cardigan bege com camiseta branca" class="h-64 w-full object-cover"/>
+        </div>
+        <div class="p-3">
+          <h3 class="font-medium">Cardigan Shawl Bege</h3>
+          <p class="text-sm text-base-700">Maciez que abraça, caimento que ergue</p>
+          <div class="mt-2 flex items-center justify-between">
+            <span class="font-semibold">R$ 259,90</span>
+            <button class="add-to-cart rounded-xl bg-base-900 text-white px-3 py-2 text-sm" data-name="Cardigan Shawl Bege" data-price="259.90">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 3: Mochila Preta -->
+      <article class="group rounded-3xl border border-base-200 bg-white p-3 shadow-soft hover:-translate-y-1 transition">
+        <div class="relative overflow-hidden rounded-2xl">
+          <img src="img/mochila-preta.jpg" alt="Mochila preta minimalista" class="h-64 w-full object-cover"/>
+        </div>
+        <div class="p-3">
+          <h3 class="font-medium">Mochila Minimal Preta</h3>
+          <p class="text-sm text-base-700">Funcionalidade silenciosa, presença urbana</p>
+          <div class="mt-2 flex items-center justify-between">
+            <span class="font-semibold">R$ 319,90</span>
+            <button class="add-to-cart rounded-xl bg-base-900 text-white px-3 py-2 text-sm" data-name="Mochila Minimal Preta" data-price="319.90">Adicionar</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Carrinho simples (drawer) -->
+  <div id="drawer" class="fixed right-0 top-0 h-full w-full sm:w-[420px] translate-x-full bg-white shadow-2xl border-l border-base-200 z-50 transition-transform">
+    <div class="flex items-center justify-between p-4 border-b">
+      <h4 class="font-semibold">Seu carrinho</h4>
+      <button id="closeDrawer" class="text-base-700">✕</button>
+    </div>
+    <div id="cartItems" class="p-4 space-y-3 text-sm"></div>
+    <div class="mt-auto p-4 border-t">
+      <div class="flex items-center justify-between mb-3"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <!-- Checkout via WhatsApp (rápido para começar) -->
+      <a id="whatsBtn" target="_blank" class="block text-center rounded-xl bg-brand-600 text-white px-4 py-3 font-medium hover:bg-brand-700">Finalizar no WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contato" class="border-t border-base-200 bg-white mt-16">
+    <div class="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 5v8l-7 5-7-5V8l7-5z" stroke="#32756f" stroke-width="1.5"/></svg>
+          <span class="font-serif text-xl">DomVest</span>
+        </div>
+        <p class="mt-3 text-base-700">Elegância com suavidade. Desde 2024.</p>
+      </div>
+      <div>
+        <h4 class="font-medium">Ajuda</h4>
+        <ul class="mt-3 space-y-2 text-base-700">
+          <li><a class="hover:underline">Trocas e Devoluções</a></li>
+          <li><a class="hover:underline">Envio e Prazos</a></li>
+          <li><a class="hover:underline">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-medium">Categorias</h4>
+        <ul class="mt-3 space-y-2 text-base-700">
+          <li><a class="hover:underline">Acessórios</a></li>
+          <li><a class="hover:underline">Malharia</a></li>
+          <li><a class="hover:underline">Bolsas e Mochilas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-medium">Contato</h4>
+        <ul class="mt-3 space-y-2 text-base-700">
+          <li>contato@domvest.com.br</li>
+          <li>Seg–Sex, 9h às 18h</li>
+          <li>Brasil</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-base-200">
+      <div class="mx-auto max-w-7xl px-4 py-6 text-xs text-base-600 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© 2025 DomVest. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:underline">Termos</a>
+          <a class="hover:underline">Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="pointer-events-none fixed inset-x-0 top-4 z-50 flex justify-center opacity-0 transition"><div class="rounded-xl bg-base-900 text-white px-4 py-3 shadow-soft">Adicionado ao carrinho</div></div>
+
+  <script>
+    // Utilitários simples de carrinho
+    const cart = JSON.parse(localStorage.getItem('domvest_cart')||'[]');
+    const drawer = document.getElementById('drawer');
+    const cartBtn = document.getElementById('cartBtn');
+    const closeDrawer = document.getElementById('closeDrawer');
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const whatsBtn = document.getElementById('whatsBtn');
+
+    function format(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+    function save(){localStorage.setItem('domvest_cart',JSON.stringify(cart));}
+    function toast(msg){const t=document.getElementById('toast');t.querySelector('div').textContent=msg;t.classList.remove('opacity-0');setTimeout(()=>t.classList.add('opacity-0'),1600)}
+    function openDrawer(){drawer.classList.remove('translate-x-full');render();}
+    function closeD(){drawer.classList.add('translate-x-full');}
+
+    function render(){
+      cartItems.innerHTML = cart.map((p,i)=>`
+        <div class="flex items-center justify-between gap-3 border border-base-200 rounded-xl p-3">
+          <div>
+            <div class="font-medium">${p.name}</div>
+            <div class="text-base-700 text-xs">Qtd: ${p.qtd}</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <strong>${format(p.price*p.qtd)}</strong>
+            <button onclick="delItem(${i})" class="text-base-700">✕</button>
+          </div>
+        </div>`).join('') || '<p class="text-base-700">Seu carrinho está vazio.</p>';
+      const total = cart.reduce((s,p)=>s+p.price*p.qtd,0);
+      cartTotal.textContent = format(total);
+      const texto = encodeURIComponent('Pedido DomVest:%0A' + cart.map(p=>`• ${p.qtd}x ${p.name} — ${format(p.price)}`).join('%0A') + `%0ATotal: ${format(total)}`);
+      whatsBtn.href = `https://wa.me/5548999999999?text=${texto}`; // <-- troque pelo seu número
+    }
+
+    function addItem(name, price){
+      const found = cart.find(p=>p.name===name);
+      if(found) found.qtd++; else cart.push({name, price: Number(price), qtd:1});
+      save(); toast('Adicionado ao carrinho'); openDrawer();
+    }
+    function delItem(i){ cart.splice(i,1); save(); render(); }
+
+    document.querySelectorAll('.add-to-cart').forEach(btn=>{
+      btn.addEventListener('click',()=> addItem(btn.dataset.name, btn.dataset.price));
+    });
+    cartBtn.addEventListener('click',openDrawer);
+    closeDrawer.addEventListener('click',closeD);
+
+    // Render inicial
+    render();
+  </script>
+</body>
+</html>
